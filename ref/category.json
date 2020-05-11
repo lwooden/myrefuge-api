@@ -1,0 +1,16 @@
+{
+  "name": "category",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "table": "myRefuge"
+    }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

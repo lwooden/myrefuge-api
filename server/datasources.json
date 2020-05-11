@@ -1,0 +1,13 @@
+{
+  "mysqlDb": {
+    "host": "${MYSQL_HOST_NAME}",
+    "port": 3306,
+    "database": "${MYSQL_DATABASE}",
+    "password": "${MYSQL_ROOT_PASSWORD}",
+    "name": "mysqlDb",
+    "connector": "mysql",
+    "user": "${MYSQL_USER}",
+    "charset": "utf8mb4",
+    "collation": "utf8mb4_unicode_ci"
+  }
+}

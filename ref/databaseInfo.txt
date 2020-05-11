@@ -1,0 +1,19 @@
+old creds
+---------
+root / password1
+
+
+
+category
+  category_id
+  category_name
+
+
+passage
+  passage_id
+  passage_text
+  passage_loc
+  category_id (foreign_key)
+
+
+  GET /verses/{cat_id}

@@ -1,0 +1,60 @@
+How to create custom model in Loopback 3
+
+
+1. run "lb" command to create your application -> myRefuge
+
+2. Create datasource object in datasources.json
+
+{
+  "mysqlDb": {
+    "host": "${MYSQL_HOST_NAME}",
+    "port": 3306,
+    "database": "${MYSQL_DATABASE}",
+    "password": "${MYSQL_ROOT_PASSWORD}",
+    "name": "mysqlDb",
+    "connector": "mysql",
+    "user": "${MYSQL_USER}",
+    "charset": "utf8mb4",
+    "collation": "utf8mb4_unicode_ci"
+  }
+}
+
+3. run "lb model" to create your first model -> category
+    - choose a Persistent model
+    - choose server
+    - define properties for the model
+
+
+4. Open up the model configuration file under ./models/category.json
+
+5. Update the category model to include the "mysql" object under options
+
+{
+  "name": "category",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "table": "category"
+     }
+  },
+  "properties": {
+    "categoryName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+
+6. Now that the model has been created and the model config now has a "mysql" statement, its time to connect 
+the model to the datasource.
+
+Put the "create-category-model.js" in the ./boot folder and launch your api and devdb services together using docker compose
+
+7. Test your routes using localhost:3000/explorer and check your database for the table you define in the model config
+
