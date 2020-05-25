@@ -12,7 +12,12 @@ module.exports = async function (app) {
     categoryName: 'Love'
   }, {
     categoryName: 'Pride'
-  }]);
+  }, {
+    categoryName: 'Fear'
+  }, {
+    categoryName: 'Marriage'
+  }
+]);
 
   console.log('Data created: \n', columns);
 };

@@ -26,7 +26,16 @@ module.exports = async function (app) {
     passageText: 'When pride comes, then comes disgrace, but with humility comes wisdom.',
     passageLocation: 'Proverbs 11:2',
     categoryId: 2
+  }, {
+    passageText: 'Be strong and very courageous, for you will give this people as an inheritance the land which I swore to their fathers to give them.',
+    passageLocation: 'Joshua 1:6',
+    categoryId: 3
+  }, {
+    passageText: 'Husbands, love your wives, just as Christ also loved the church and gave Himself up for her,',
+    passageLocation: 'Ephesians 5:25',
+    categoryId: 4
   }
+
 
 ]);
 
