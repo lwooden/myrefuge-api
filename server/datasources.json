@@ -3,7 +3,7 @@
     "host": "${MYSQL_HOST_NAME}",
     "port": 3306,
     "database": "${MYSQL_DATABASE}",
-    "password": "${MYSQL_ROOT_PASSWORD}",
+    "password": "${MYSQL_PASSWORD}",
     "name": "mysqlDb",
     "connector": "mysql",
     "user": "${MYSQL_USER}",
